@@ -17,8 +17,8 @@
 # include <mlx.h>
 # include <fcntl.h>
 
-# define WIDTH		1200
-# define HEIGHT		900
+# define WIDTH						1200
+# define HEIGHT						900
 
 typedef struct		s_start
 {
@@ -49,22 +49,24 @@ typedef struct		s_mlx
 	t_start			start;
 }					t_mlx;
 
-t_coord				*check_map(int fd);
-void				make_list(t_coord **list, char **str);
-t_coord				*make_elem(int line, int col, char *alt);
-void				add_alem(t_coord **list, t_coord elem);
-int					key_hook(int keycode, t_mlx *s_libx);
-int					mouse_hook(int button, int x, int y);
-void				init(t_mlx *s_libx);
-void				init_window(t_mlx *s_libx);
-void				init_hook(t_mlx *s_libx);
-void				ft_draw_line(t_coord p1, t_coord p2, t_mlx *var, int color);
-void				position(int x, int y, int z, t_coord *p);
-void				control_draw(t_mlx *s_libx);
-int					fdf_expose(t_mlx *s_libx);
-int					nb_arg(int ac);
-int					val_fd(int fd);
-void				repaint(t_mlx *s_libx);
-void				init_start(t_start *start);
+
+t_coord				*check_map		(int fd);
+void				make_list		(t_coord **list, char **str);
+t_coord				*make_elem		(int line, int col, char *alt);
+void				add_alem		(t_coord **list, t_coord elem);
+int					key_hook		(int keycode, t_mlx *s_libx);
+int					mouse_hook		(int button, int x, int y);
+void				init			(t_mlx *s_libx);
+void				init_window		(t_mlx *s_libx);
+void				init_hook		(t_mlx *s_libx);
+void				ft_draw_line	(t_coord p1, t_coord p2, t_mlx *var,
+										int color);
+void				position		(int x, int y, int z, t_coord *p);
+void				control_draw	(t_mlx *s_libx);
+int					fdf_expose		(t_mlx *s_libx);
+int					nb_arg			(int ac);
+int					val_fd			(int fd);
+void				repaint			(t_mlx *s_libx);
+void				init_start		(t_start *start);
 
 #endif
